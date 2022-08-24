@@ -5,6 +5,9 @@ app = Flask("projeto")
 def ola_mundo():
     #criar uma variavel com o meu nome
     nome="Bruno da Silva Justinio"
-    return render_template("alo.html", n=nome), 200
+    produtos = [
+        {"nome": "ração", "preco": 199.99},
+        {"nome": "Playstation", "preco": 1999.99}]
+    return render_template("alo.html", n=nome, aProdutos=produtos), 200
 
 app.run()
